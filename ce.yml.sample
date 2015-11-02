@@ -1,0 +1,8 @@
+database: ""
+databaseUser: ""
+databasePassword: ""
+databaseType: ""
+oauthConsumerKey: ""
+oauthConsumerSecret: ""
+oauth_token: ""
+oauth_token_secret: ""
