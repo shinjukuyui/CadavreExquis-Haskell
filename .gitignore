@@ -1,5 +1,6 @@
-/.cabal-sandbox
-/dist
-cabal.sandobox.config
+.cabal-sandbox/
+.stack-work/
+dist/
+cabal.sandbox.config
 ce.yml
 ._*
