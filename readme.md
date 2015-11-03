@@ -9,18 +9,19 @@ Hypercardスタック「優美なる死体 v2.1」をHaskellで実装しまし�
 データベースを作成後、ce.sqlを実行してください。
 
 ~~~~
-mysql > source ce.sql
+mysql> source /path/to/dir/ce.sql
 ~~~~
 
 ### Twitterの準備
 
-生成した文はTwitterにPostします。Twitterでのアプリケーションの認証が必要です。TwitterにPostしない場合は169行目以降をコメントアウトしてください。
+生成した文はTwitterにPostします。Twitterでのアプリケーションの認証が必要です。TwitterにPostしない場合はce.hsの169行目以降をコメントアウトしてください。
 
 ### コードの準備
 
+[stack](http://www.stackage.org/)が必要です。また、GHC7.10が必要です。インストールしているGHCのバージョンが古い場合は、stack setup を実行してください。
+
 ~~~~
-$ cabal sandbox init
-$ cabal install --only-dependencies
+$ stack build
 ~~~~
 
 ce.yml.sampleをコピーしてce.ymlファイルを作成し、データベースとTwitterの接続情報を記述してください。
@@ -28,9 +29,5 @@ ce.yml.sampleをコピーしてce.ymlファイルを作成し、データベー�
 ## 実行
 
 ~~~~
-$ cabal run ce
+$ stack exec ce
 ~~~~
-
-## 既知の問題
-
-実行時にFromJSONErrが起きますが現在調査中です。
